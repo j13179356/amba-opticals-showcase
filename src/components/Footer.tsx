@@ -120,15 +120,15 @@ export const Footer = () => {
               © 2024 Amba Opticals. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              </Link>
+              <Link to="/cookie-policy" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
