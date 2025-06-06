@@ -1,5 +1,6 @@
 
 import { Eye, Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const socialLinks = [
@@ -9,7 +10,11 @@ export const Footer = () => {
   ];
 
   const quickLinks = [
-    "Home", "About Us", "Products", "Services", "Contact"
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Products", href: "/products" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" }
   ];
 
   const services = [
@@ -24,10 +29,10 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <Eye className="h-8 w-8" />
               <span className="text-2xl font-bold">Amba Opticals</span>
-            </div>
+            </Link>
             <p className="text-primary-foreground/80 leading-relaxed">
               Your trusted partner for clear vision and stylish eyewear. 
               Quality, service, and expertise you can count on for over 15 years.
@@ -51,13 +56,13 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
-                <li key={link}>
-                  <a 
-                    href={`#${link.toLowerCase().replace(' ', '')}`}
+                <li key={link.name}>
+                  <Link 
+                    to={link.href}
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
