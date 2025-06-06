@@ -14,6 +14,7 @@ export const Header = () => {
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
+    { name: "Shop", href: "/shop" },
   ];
 
   const isActive = (href: string) => {
@@ -47,11 +48,11 @@ export const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Book Appointment
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/book-appointment">Book Appointment</Link>
             </Button>
-            <Button size="sm">
-              Call Now
+            <Button size="sm" asChild>
+              <Link to="/call-now">Call Now</Link>
             </Button>
           </div>
 
@@ -83,11 +84,11 @@ export const Header = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
-                  Book Appointment
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/book-appointment">Book Appointment</Link>
                 </Button>
-                <Button size="sm">
-                  Call Now
+                <Button size="sm" asChild>
+                  <Link to="/call-now">Call Now</Link>
                 </Button>
               </div>
             </nav>

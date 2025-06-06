@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Eye, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -20,12 +21,14 @@ export const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
-                Shop Collection
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="group" asChild>
+                <Link to="/shop">
+                  Shop Collection
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg">
-                Book Eye Test
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/book-appointment">Book Eye Test</Link>
               </Button>
             </div>
 

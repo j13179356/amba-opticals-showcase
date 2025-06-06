@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   const achievements = [
@@ -46,8 +47,8 @@ export const About = () => {
               </div>
             </div>
 
-            <Button size="lg" className="mt-8">
-              Learn More About Us
+            <Button size="lg" className="mt-8" asChild>
+              <Link to="/contact">Learn More About Us</Link>
             </Button>
           </div>
 
